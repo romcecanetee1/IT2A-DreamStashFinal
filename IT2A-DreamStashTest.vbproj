@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D3791CC-D295-4FE5-81D6-9469B0DAF25F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IT2A_DreamStashTest.My.MyApplication</StartupObject>
+    <RootNamespace>IT2A_DreamStashTest</RootNamespace>
+    <AssemblyName>IT2A-DreamStashTest</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IT2A-DreamStashTest.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IT2A-DreamStashTest.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.2.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminAddUser.Designer.vb">
+      <DependentUpon>AdminAddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminBene.Designer.vb">
+      <DependentUpon>AdminBene.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBene.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCampaign.Designer.vb">
+      <DependentUpon>AdminCampaign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCampaign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashb.Designer.vb">
+      <DependentUpon>AdminDashb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDonation.Designer.vb">
+      <DependentUpon>AdminDonation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDonation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.vb">
+      <DependentUpon>AdminHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateCampaign.Designer.vb">
+      <DependentUpon>AdminUpdateCampaign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateCampaign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateUsers.Designer.vb">
+      <DependentUpon>AdminUpdateUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsers.Designer.vb">
+      <DependentUpon>AdminUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersBenePrint3.Designer.vb">
+      <DependentUpon>AdminUsersBenePrint3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersBenePrint3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersCampaignPrint4.Designer.vb">
+      <DependentUpon>AdminUsersCampaignPrint4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersCampaignPrint4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersDonationHistoryPaint2.Designer.vb">
+      <DependentUpon>AdminUsersDonationHistoryPaint2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersDonationHistoryPaint2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersPrint1.Designer.vb">
+      <DependentUpon>AdminUsersPrint1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersPrint1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="AssistantAdminCampaign1.Designer.vb">
+      <DependentUpon>AssistantAdminCampaign1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantAdminCampaign1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantAdminDashboard.Designer.vb">
+      <DependentUpon>AssistantAdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantAdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantAdminDonation1.Designer.vb">
+      <DependentUpon>AssistantAdminDonation1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantAdminDonation1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantAdminHome.Designer.vb">
+      <DependentUpon>AssistantAdminHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantAdminHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantAdminUser.Designer.vb">
+      <DependentUpon>AssistantAdminUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantAdminUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsstAdminDonationHisto.Designer.vb">
+      <DependentUpon>AsstAdminDonationHisto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AsstAdminDonationHisto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connector.vb" />
+    <Compile Include="CR_Beneficiary.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Beneficiary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_Campaign.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Campaign.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_DonationHistory.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_DonationHistory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_Users.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Users.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DonorAccountSetting.Designer.vb">
+      <DependentUpon>DonorAccountSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonorAccountSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonorBene.Designer.vb">
+      <DependentUpon>DonorBene.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonorBene.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonorCampaign.Designer.vb">
+      <DependentUpon>DonorCampaign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonorCampaign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonorDashb.Designer.vb">
+      <DependentUpon>DonorDashb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonorDashb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonorDonationHisto2.Designer.vb">
+      <DependentUpon>DonorDonationHisto2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonorDonationHisto2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonorDonationHistory.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DonorDonationHistoryReport.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="DonorDonationHistoryReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DonorDonationHistoryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DonorHistory.Designer.vb">
+      <DependentUpon>DonorHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonorHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonorHome.Designer.vb">
+      <DependentUpon>DonorHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonorHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonorPrintShow.Designer.vb">
+      <DependentUpon>DonorPrintShow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonorPrintShow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.vb">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetStarted.Designer.vb">
+      <DependentUpon>GetStarted.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GetStarted.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resource1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration Successful.Designer.vb">
+      <DependentUpon>Registration Successful.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registration Successful.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminAddUser.resx">
+      <DependentUpon>AdminAddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminBene.resx">
+      <DependentUpon>AdminBene.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCampaign.resx">
+      <DependentUpon>AdminCampaign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashb.resx">
+      <DependentUpon>AdminDashb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDonation.resx">
+      <DependentUpon>AdminDonation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUpdateCampaign.resx">
+      <DependentUpon>AdminUpdateCampaign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUpdateUsers.resx">
+      <DependentUpon>AdminUpdateUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsers.resx">
+      <DependentUpon>AdminUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersBenePrint3.resx">
+      <DependentUpon>AdminUsersBenePrint3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersCampaignPrint4.resx">
+      <DependentUpon>AdminUsersCampaignPrint4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersDonationHistoryPaint2.resx">
+      <DependentUpon>AdminUsersDonationHistoryPaint2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersPrint1.resx">
+      <DependentUpon>AdminUsersPrint1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantAdminCampaign1.resx">
+      <DependentUpon>AssistantAdminCampaign1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantAdminDashboard.resx">
+      <DependentUpon>AssistantAdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantAdminDonation1.resx">
+      <DependentUpon>AssistantAdminDonation1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantAdminHome.resx">
+      <DependentUpon>AssistantAdminHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantAdminUser.resx">
+      <DependentUpon>AssistantAdminUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsstAdminDonationHisto.resx">
+      <DependentUpon>AsstAdminDonationHisto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Beneficiary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Beneficiary.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Campaign.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Campaign.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_DonationHistory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_DonationHistory.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Users.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Users.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorAccountSetting.resx">
+      <DependentUpon>DonorAccountSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorBene.resx">
+      <DependentUpon>DonorBene.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorCampaign.resx">
+      <DependentUpon>DonorCampaign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorDashb.resx">
+      <DependentUpon>DonorDashb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorDonationHisto2.resx">
+      <DependentUpon>DonorDonationHisto2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorDonationHistoryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DonorDonationHistoryReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorHistory.resx">
+      <DependentUpon>DonorHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorHome.resx">
+      <DependentUpon>DonorHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonorPrintShow.resx">
+      <DependentUpon>DonorPrintShow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetStarted.resx">
+      <DependentUpon>GetStarted.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resource1.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration Successful.resx">
+      <DependentUpon>Registration Successful.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-ctcS1Diu0-transformed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crowdfunding %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crowdfunding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-svgrepo-com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-svgrepo-com %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-svgrepo-com1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\donation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\donation-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\donation-svgrepo-com1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\done-1477-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hexagons-patterns-violet-background-violet-blocks-black-3840x2160-2277.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview %287%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-2-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-minimalistic-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt-text-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-alt-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting-gear-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-svgrepo-com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-svgrepo-com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-svgrepo-com %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-svgrepo-com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-svgrepo-com %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-svgrepo-com %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-svgrepo-com %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

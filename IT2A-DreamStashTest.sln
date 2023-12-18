@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34301.259
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IT2A-DreamStashTest", "IT2A-DreamStashTest.vbproj", "{6D3791CC-D295-4FE5-81D6-9469B0DAF25F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D3791CC-D295-4FE5-81D6-9469B0DAF25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3791CC-D295-4FE5-81D6-9469B0DAF25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3791CC-D295-4FE5-81D6-9469B0DAF25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3791CC-D295-4FE5-81D6-9469B0DAF25F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66832C92-5F4F-43C2-B8CD-0045678FA2D5}
+	EndGlobalSection
+EndGlobal
